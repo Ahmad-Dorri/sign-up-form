@@ -18,6 +18,16 @@ export function isInputValid(value, type) {
       const valid = !!res;
       return valid;
     }
+    case 'phoneNumber': {
+      const res = /^09\d{9}$/.exec(value);
+      const valid = !!res;
+      return valid;
+    }
+    case 'password': {
+      const res = /^[a-z0-9._A-Z]+$/.exec(value);
+      const valid = !!res;
+      return valid;
+    }
     default:
       break;
   }
